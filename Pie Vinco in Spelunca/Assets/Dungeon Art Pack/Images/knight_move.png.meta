@@ -1,0 +1,264 @@
+fileFormatVersion: 2
+guid: e138e68b61362d24fab8a2da9310087b
+timeCreated: 1431872869
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: knight_move_0
+    21300002: knight_move_1
+    21300004: knight_move_2
+    21300006: knight_move_3
+    21300008: knight_move_4
+    21300010: knight_move_5
+    21300012: knight_move_6
+    21300014: knight_move_7
+    21300016: knight_move_8
+    21300018: knight_move_9
+    21300020: knight_move_10
+    21300022: knight_move_11
+    21300024: knight_move_12
+    21300026: knight_move_13
+    21300028: knight_move_14
+    21300030: knight_move_15
+    21300032: knight_move_16
+    21300034: knight_move_17
+    21300036: knight_move_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: knight_move_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 636
+        width: 97
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_1
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 636
+        width: 97
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_2
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 638
+        width: 97
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_3
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 638
+        width: 97
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_4
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 639
+        width: 98
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_5
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 454
+        width: 97
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_6
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 452
+        width: 98
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 452
+        width: 98
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_8
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 449
+        width: 99
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_9
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 449
+        width: 99
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_10
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 263
+        width: 98
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_11
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 263
+        width: 99
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_12
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 266
+        width: 97
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_13
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 266
+        width: 97
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_14
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 269
+        width: 96
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_15
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 84
+        width: 96
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_16
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 83
+        width: 96
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_17
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 83
+        width: 96
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: knight_move_18
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 81
+        width: 97
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
