@@ -6,12 +6,18 @@ public class PlayerController : MonoBehaviour {
 	private Transform myTransform;
 	private Vector2 heading = Vector2.zero;
 	public float maxSpeed;
+	public float maxVelocity;
+	public float stoppingPower;
 	private float angle = 0f;
 	private float rotationDirection = 0;
+//	private float movementDrag;
+	public float restingDragMultiplyer;
+	private Animator myAnimator;
 	// Use this for initialization
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody2D>();
 		myTransform = GetComponent<Transform>();
+		myAnimator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -21,35 +27,27 @@ public class PlayerController : MonoBehaviour {
 	
 	public void Move(Vector2 playerInput)
 	{
-		myRigidBody.velocity = playerInput * maxSpeed;
+		//myRigidBody.velocity = playerInput * maxSpeed;
+		
+		if(playerInput.magnitude >= 0f && myRigidBody.velocity.magnitude <= maxVelocity)
+		{
+			myRigidBody.AddForce(playerInput * maxSpeed);
+		}
+/*		else if(playerInput.magnitude == 0f && myRigidBody.velocity.magnitude >0f)
+		{
+			myRigidBody.AddForce(myRigidBody.velocity * -restingDragMultiplyer);
+		}
+		
+		Debug.Log (myRigidBody.velocity.magnitude);
+*/		
+		myAnimator.SetFloat("speed", playerInput.magnitude);
 	}
 	public void FaceMouse(Vector2 mousePosition)
 	{
-		//Debug.Log("Mouse Pos\t" + mousePosition);
-		Debug.Log (myTransform.up);
-		Vector2 localSpaceMousePosition = myTransform.InverseTransformPoint(mousePosition);
-
-		if(localSpaceMousePosition.x < 0f) rotationDirection = -1f;
-		else if(localSpaceMousePosition.x > 0f) rotationDirection = 1f;
-		else rotationDirection = 0f;
-		
-		Debug.DrawLine(myTransform.position, myTransform.TransformPoint(myTransform.up) *-1f,Color.green);
-		Debug.DrawLine(myTransform.position, mousePosition, Color.blue);
-		
-		float angleDelta = Vector2.Angle( (Vector2)myTransform.up *-1f , (Vector2) myTransform.position - (Vector2)mousePosition ) ;
-		
-		if(angleDelta > 0.1f)
-		{
-			angle = angle + angleDelta * rotationDirection;
-		}
-		
-		if(angle > 360f) angle = angle - 360f;
-		else if (angle <0f) angle = angle + 360f;
-		
-		Debug.Log ("Rot Dir\t" + rotationDirection);
-		Debug.Log("angle Delta\t" + angleDelta);
-		Debug.Log("angle \t" + angle);
-		
-		//myRigidBody.MoveRotation(angle);
+		myRigidBody.MoveRotation(Utility.LookAtAngle2D(myTransform.position,mousePosition));
+	}
+	public void Attack()
+	{
+		myAnimator.SetTrigger("attack");
 	}
 }

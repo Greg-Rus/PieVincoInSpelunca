@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Dungeon Art Pack\AnimateSprite.cs" />
+     <Compile Include="Assets\Scripts\BasicFloorGenerator.cs" />
+     <Compile Include="Assets\Scripts\CaveGenerator.cs" />
      <Compile Include="Assets\Scripts\Imported\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\Imported\ApplicationManager.cs" />
      <Compile Include="Assets\Scripts\Imported\ChangeColor.cs" />
@@ -58,8 +60,10 @@
      <Compile Include="Assets\Scripts\Imported\ScrollDetailTexture.cs" />
      <Compile Include="Assets\Scripts\Imported\ShowSliderValue.cs" />
      <Compile Include="Assets\Scripts\Imported\TiltWindow.cs" />
+     <Compile Include="Assets\Scripts\MainCameraFolow.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerInputHandler.cs" />
+     <Compile Include="Assets\Scripts\Utility.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

@@ -7,7 +7,7 @@ public class PlayerInputHandler : MonoBehaviour {
 	private float verticalMovement;
 	private Vector2 heading;
 	private Vector3 mousePositionInWorldSpace;
-	public PlayerController myController;
+	private PlayerController myController;
 	
 	// Use this for initialization
 	void Start () {
@@ -16,6 +16,11 @@ public class PlayerInputHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetButtonDown("Fire1"))
+		{
+			Debug.Log ("fire button");
+			myController.Attack();
+		}
 	}
 	
 	void FixedUpdate()
