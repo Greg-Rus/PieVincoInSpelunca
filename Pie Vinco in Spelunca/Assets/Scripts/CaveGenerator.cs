@@ -28,16 +28,28 @@ public class CaveGenerator : MonoBehaviour {
 
 	public void RefineCavern()
 	{
-		
+
+
+		//DesignCaverns(false);
 		for (int i = 0; i<spaceReducingCycles ; i++)
 		{
-			DesignCaverns(true);
+			DesignCaverns(Map, true);
 		}
 		
 		for (int i = 0; i<smoothingCycles ; i++)
 		{
-			DesignCaverns(false);
+			DesignCaverns(Map, false);
 		}
+		Debug.Log (countWalls());
+	}
+	public int countWalls()
+	{
+		int wallCount = 0;
+		foreach (int tile in Map)
+		{
+			if (tile == 1) wallCount++;
+		}
+		return  wallCount * 100 / (MapHeight*MapWidth);
 	}
 	
 	public void BuildCaverns()
@@ -50,19 +62,19 @@ public class CaveGenerator : MonoBehaviour {
 			{
 				if(Map[column,row] == 1)
 				{
-					caveTiles[column,row] = Instantiate(wall, new Vector3(column,row,this.transform.position.z),Quaternion.identity) as GameObject;
+					caveTiles[column,row] = Instantiate(wall, new Vector3(column*0.5f,row*0.5f,this.transform.position.z),Quaternion.identity) as GameObject;
 					caveTiles[column,row].transform.parent = this.transform;
 				}
 				else if(Map[column,row] == 0)
 				{
-					caveTiles[column,row] = Instantiate(floor, new Vector3(column,row,this.transform.position.z),Quaternion.identity) as GameObject;
+					caveTiles[column,row] = Instantiate(floor, new Vector3(column*0.5f,row*0.5f,this.transform.position.z),Quaternion.identity) as GameObject;
 					caveTiles[column,row].transform.parent = this.transform;
 				}	
 			}
 		}
 	}
 	
-	public void DesignCaverns(bool reduceOpenSpace)
+	public void DesignCaverns(int[,] Map, bool reduceOpenSpace = false)
 	{
 		// By initilizing column in the outter loop, its only created ONCE
 		for(int column=0, row=0; row <= MapHeight-1; row++)
@@ -81,11 +93,11 @@ public class CaveGenerator : MonoBehaviour {
 		
 		if(Map[x,y]==1)
 		{
-			if( numWalls >= 4 )
+			if( numWalls >= 4 ) //numWalls >= 4 
 			{
 				return 1;
 			}
-			if(numWalls<2)
+			if(numWalls<2) //numWalls<2
 			{
 				return 0;
 			}
@@ -95,12 +107,12 @@ public class CaveGenerator : MonoBehaviour {
 		{
 			if(reduceOpenSpace)
 			{
-				if(numWalls>=5 || numWalls <=1)
+				if(numWalls>=5 || numWalls <=1) //numWalls>=5 || numWalls <=1
 				{
 					return 1;
 				}
 			}
-			else if(numWalls>=5 )
+			else if(numWalls>=5 ) //numWalls>=5
 			{
 				return 1;
 			}
@@ -215,7 +227,7 @@ public class CaveGenerator : MonoBehaviour {
 					
 					
 					
-					if(row == middleOfMapHeight)
+					if(row == middleOfMapHeight ||row == middleOfMapHeight+1 )
 					{
 						Map[column,row] = 0;
 					}

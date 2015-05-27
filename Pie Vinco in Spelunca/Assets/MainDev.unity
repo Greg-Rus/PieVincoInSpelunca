@@ -338,7 +338,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -384,6 +384,7 @@ GameObject:
   - 4: {fileID: 450226074}
   - 114: {fileID: 450226075}
   - 114: {fileID: 450226076}
+  - 114: {fileID: 450226077}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -423,17 +424,36 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 450226073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e9c8ce8f82d0f5468d67d643cd92e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapHeight: 50
-  MapWidth: 50
-  spaceReducingCycles: 1
-  smoothingCycles: 4
+  MapHeight: 100
+  MapWidth: 100
+  spaceReducingCycles: 2
+  smoothingCycles: 5
   PercentAreWalls: 40
-  PercentIsDenserCenter: 0
-  PercentAreDenserWalls: 0
+  PercentIsDenserCenter: 10
+  PercentAreDenserWalls: 45
   wall: {fileID: 156224, guid: 2d4342d817b26374a947de24abb543da, type: 2}
   floor: {fileID: 151578, guid: a8f9ad960aab4fa4c815620423a8d723, type: 2}
+--- !u!114 &450226077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 450226073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb196c527dbbe3645a7d0b7fadc75b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 156224, guid: 2d4342d817b26374a947de24abb543da, type: 2}
+  floor: {fileID: 151578, guid: a8f9ad960aab4fa4c815620423a8d723, type: 2}
+  mapHeight: 100
+  mapWidth: 100
+  numberOfRooms: 10
+  minRoomSize: 10
+  maxRoomSize: 30
+  roomPlacementAttempts: 20
