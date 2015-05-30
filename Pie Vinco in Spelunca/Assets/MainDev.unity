@@ -115,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 56711114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81599998, y: .159999996, z: 0}
+  m_LocalPosition: {x: 2.66000009, y: 1.25999999, z: 0}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -453,7 +453,7 @@ MonoBehaviour:
   floor: {fileID: 151578, guid: a8f9ad960aab4fa4c815620423a8d723, type: 2}
   mapHeight: 100
   mapWidth: 100
-  numberOfRooms: 15
+  numberOfRooms: 30
   minRoomSize: 15
   maxRoomSize: 30
   roomPlacementAttempts: 20
@@ -470,6 +470,7 @@ GameObject:
   - 58: {fileID: 1474053633}
   - 50: {fileID: 1474053632}
   - 95: {fileID: 1474053631}
+  - 114: {fileID: 1474053636}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -502,7 +503,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1474053630}
   m_Mass: 1
   m_LinearDrag: 15
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 30
   m_GravityScale: 0
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -555,8 +556,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1474053630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.49000001, y: .0829999968, z: 0}
+  m_LocalPosition: {x: 1, y: 2, z: 0}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1474053636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1474053630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96602567a90cdc248be6fcde75fa5ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 5}
+  maxSpeed: 5
+  closeEnoughDistance: .100000001
+  destinationReached: 0

@@ -12,4 +12,5 @@ public static class Utility {
 		
 		return angle *-1f; //should investigate why -1 is necessary. Using Scale.y -1 does not help.
 	}
+	
 }

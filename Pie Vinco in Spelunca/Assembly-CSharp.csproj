@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\BasicFloorGenerator.cs" />
      <Compile Include="Assets\Scripts\CaveGenerator.cs" />
      <Compile Include="Assets\Scripts\DungeonGenerator.cs" />
+     <Compile Include="Assets\Scripts\EnemyMotor.cs" />
      <Compile Include="Assets\Scripts\Imported\ActiveStateToggler.cs" />
      <Compile Include="Assets\Scripts\Imported\ApplicationManager.cs" />
      <Compile Include="Assets\Scripts\Imported\ChangeColor.cs" />
