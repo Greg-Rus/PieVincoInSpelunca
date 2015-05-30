@@ -13,10 +13,12 @@ public class DungeonGenerator : MonoBehaviour {
 	public int minRoomSize;
 	public int maxRoomSize;
 	public int roomPlacementAttempts;
+	public int seed = 42;
 	
 	
 	// Use this for initialization
 	void Start () {
+		Random.seed = seed;
 		dungeonMap = new int[mapWidth,mapHeight];
 		InitializeDungeon();
 		
