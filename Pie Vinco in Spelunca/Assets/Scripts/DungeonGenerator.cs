@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DungeonGenerator : MonoBehaviour {
 
-	private int[,] dungeonMap;
+	public int[,] dungeonMap;
 	private GameObject[,] dungeonTiles;
 	public GameObject wall; //This should be in a singleton
 	public GameObject floor;

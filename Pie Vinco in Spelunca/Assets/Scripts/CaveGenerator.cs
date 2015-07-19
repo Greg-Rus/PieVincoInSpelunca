@@ -19,8 +19,6 @@ public class CaveGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//Map = new int[MapWidth,MapHeight];
-		
-		
 		RandomFillMap();
 		RefineCavern();
 		BuildCaverns();
